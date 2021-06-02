@@ -22,7 +22,7 @@ export default function ChatMenu() {
     <div className="flex flex-col w-96" style={{ width: '34rem'}}>
       <ChatHeader />
       <SearchBar />
-      <div className="w-full mt-4">
+      <div className="w-full mt-2">
         { chatCards.map(card => <ChatCard userName={card.userName} tagline={card.tagline} />) }
       </div>
     </div>
