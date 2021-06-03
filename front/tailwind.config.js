@@ -15,10 +15,14 @@ module.exports = {
       }
     },
   },
+  plugins: [
+    require('tailwind-scrollbar')
+  ],
   variants: {
     extend:  {
       fill: ['hover', 'focus'],
+      margin: ['first', 'last'],
     },
-  },
-  plugins: []
+    scrollbar: ['rounded']
+  }
 }

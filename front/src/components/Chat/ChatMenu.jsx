@@ -19,10 +19,10 @@ const chatCards = [
 
 export default function ChatMenu() {
   return (
-    <div className="flex flex-col w-96" style={{ width: '34rem'}}>
+    <div className="flex flex-col w-96 h-full" style={{ width: '34rem'}}>
       <ChatHeader />
       <SearchBar />
-      <div className="w-full mt-2">
+      <div className="w-full pr-3 mt-4 max-h-full overflow-y-auto scrollbar scrollbar-thin scrollbar-track-transparent scrollbar-thumb-rounded-full scrollbar-thumb-gray-200 hover:scrollbar-thumb-gray-400 transition-all">
         { chatCards.map(card => <ChatCard userName={card.userName} tagline={card.tagline} />) }
       </div>
     </div>
