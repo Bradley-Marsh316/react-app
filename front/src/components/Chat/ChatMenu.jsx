@@ -32,7 +32,7 @@ const chatCards = [
 
 export default function ChatMenu() {
   return (
-    <div className="flex flex-col w-96 h-full" style={{ width: '34rem'}}>
+    <div className="flex flex-col h-full w-full">
       <ChatHeader />
       <SearchBar />
       <div className="w-full pr-3 mt-4 max-h-full overflow-y-auto scrollbar scrollbar-thin scrollbar-track-transparent scrollbar-thumb-rounded-full scrollbar-thumb-gray-200 hover:scrollbar-thumb-gray-400 transition-all">
