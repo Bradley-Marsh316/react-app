@@ -1,3 +1,5 @@
+import React from 'react';
+
 import ChatHeader from './ChatHeader';
 import SearchBar from './SearchBar';
 import ChatCard from './ChatCard';

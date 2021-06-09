@@ -1,3 +1,5 @@
+import React from 'react';
+
 import { ReactComponent as Plus } from '../../assets/svg/plus.svg';
 
 export default function Button({ text }) {

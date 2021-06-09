@@ -1,3 +1,5 @@
+import React from 'react';
+
 export default function ChatCard({ card: { userName, profilePicture, age, tagline, content, active } }) {
   return (
     <div className="w-full flex flex-col bg-white rounded-md shadow-md p-8 my-4 first:mt-2 last:mb-2 cursor-pointer"> 

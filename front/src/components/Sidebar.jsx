@@ -1,3 +1,5 @@
+import React from 'react';
+
 import Avatar from '../assets/images/avatar.png';
 import { ReactComponent as ChevronDown } from '../assets/svg/chevron-down.svg';
 

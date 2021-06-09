@@ -1,3 +1,5 @@
+import React from 'react';
+
 import { ReactComponent as ChevronDown } from '../../assets/svg/chevron-down.svg';
 
 export default function SearchBar() {

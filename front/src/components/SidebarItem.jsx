@@ -1,3 +1,5 @@
+import React from 'react';
+
 import { ReactComponent as HomeIcon } from '../assets/svg/grid.svg';
 import { ReactComponent as ChatIcon } from '../assets/svg/chat.svg';
 import { ReactComponent as PersonIcon } from '../assets/svg/person.svg';

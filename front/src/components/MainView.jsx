@@ -1,3 +1,5 @@
+import React from 'react';
+
 import ChatMenu from './Chat/ChatMenu';
 import ChatWindow from './Chat/ChatWindow/ChatWindow';
 

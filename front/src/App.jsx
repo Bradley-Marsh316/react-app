@@ -1,3 +1,4 @@
+import React from 'react';
 import MainView from './components/MainView';
 import Sidebar from './components/Sidebar';
 
