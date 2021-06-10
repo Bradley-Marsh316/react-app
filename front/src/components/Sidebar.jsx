@@ -42,9 +42,9 @@ export default function Sidebar() {
       </div>
       <div className="flex flex-col justify-between h-full font-semibold tracking-wide">
         <div>
-          {sidebarItems.map(item => {
+          {sidebarItems.map((item, i) => {
             return (
-              <SidebarItem item={item} />
+              <SidebarItem key={i} item={item} />
             )
           })}
         </div>

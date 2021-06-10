@@ -8,12 +8,13 @@ services:
       DATABASE_URL: postgres://user:pass@postgres:5432/ReactApp
       NODE_ENV: dev
       PORT: 3000
+      JWT_SECRET: JshhadsgkiRIrl7FqqxGocHJYnFutJ6QDsc4tMOturpIpdqFGXTAEAYCGXOR
     ports:
       - "3000:3000"
     command: npm run dev
     volumes:
       - .:/app/:z
-      - /app/node_modules
+      - ./app/node_modules
 
   postgres:
     image: postgres:11.5
