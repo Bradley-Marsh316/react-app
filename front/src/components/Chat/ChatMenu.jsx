@@ -38,7 +38,7 @@ export default function ChatMenu() {
       <ChatHeader />
       <SearchBar />
       <div className="w-full pr-3 mt-4 max-h-full overflow-y-auto scrollbar scrollbar-thin scrollbar-track-transparent scrollbar-thumb-rounded-full scrollbar-thumb-gray-200 hover:scrollbar-thumb-gray-400 transition-all">
-        { chatCards.map(card => <ChatCard card={card} />) }
+        { chatCards.map((card, i) => <ChatCard key={i} card={card} />) }
       </div>
     </div>
   )
