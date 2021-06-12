@@ -24,6 +24,6 @@ app.use(function(req, res, next) {
   next();
 });
 
-app.use(api)
+app.use(api);
 
-app.listen(3000, () => console.log('listening on port 3000'))
+app.listen(process.env.PORT, () => console.log(`Listening on port ${process.env.PORT}`))
