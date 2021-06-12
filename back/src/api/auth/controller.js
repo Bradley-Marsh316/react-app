@@ -6,7 +6,8 @@ module.exports = {
   async login(req, res) {
     try {
       let { email, password } = req.body;
-
+      console.log('hi');
+      
       if (!email) return res.status(400).json({ message: 'Email Required!'});
       if (!password) return res.status(400).json({ message: 'Password Required!'});
 
