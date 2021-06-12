@@ -6,7 +6,7 @@ import Body from './Body';
 export default function ChatWindow() {
   return (
     <div className="flex flex-col w-full h-full">
-      <Header />
+      <Header userName="Bradley Marsh" tagline="last online 2 minutes" />
       <Body />
     </div>
   )

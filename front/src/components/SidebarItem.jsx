@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link, useLocation } from 'react-router-dom';
 
 import { ReactComponent as HomeIcon } from '../assets/svg/grid.svg';
 import { ReactComponent as ChatIcon } from '../assets/svg/chat.svg';
@@ -18,13 +19,17 @@ let icons = {
   'power': PowerIcon
 }
 
-export default function SidebarItem({ item: { icon, text } }) {
+export default function SidebarItem({ item: { icon, text, route } }) {
   let Icon = icons[icon];
 
+  const { pathname } = useLocation();
+
   return (
-    <div className="flex w-auto text-md ml-8 mb-8 group cursor-pointer items-center">
-      <Icon className="fill-current group-hover:text-active text-light"/>
-      <h1 className="pl-4 text-light group-hover:text-active text-sm">{text}</h1>
-    </div>
+    <Link to={route}>
+      <div className={`flex w-auto text-md ml-8 mb-8 group cursor-pointer items-center ${pathname === route ? 'text-active' : 'text-light'}`}>
+        <Icon className="fill-current group-hover:text-active"/>
+        <h1 className="pl-4 group-hover:text-active text-sm">{text}</h1>
+      </div>
+    </Link>
   )
 }
