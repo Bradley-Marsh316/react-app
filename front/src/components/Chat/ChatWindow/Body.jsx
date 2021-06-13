@@ -1,38 +1,18 @@
-import React from 'react';
+import React, { useContext } from 'react';
 
 import SentMessage from './Messages/SentMessage';
 import RecievedMessage from './Messages/RecievedMessage';
-
-const messages = [
-  {
-    type: 'sent',
-    content: 'Lorem ipsum fdfdfdsfdsf ds f fdfdlksj huiehfdb feuf dslkjfh ewiulf hdskfh elukh fufh sdkfjlhseui fhuehakflhds '
-  },
-  {
-    type: 'sent',
-    content: 'Lorem ipsum fdfdfdsfdsf ds f fdfdlksj huiehfdb feuf dslkjfh ewiulf hdskfh elukh fufh sdkfjlhseui fhuehakflhds '
-  },
-  {
-    type: 'recieved',
-    content: 'Lorem ipsum fdfdfdsfdsf ds f fdfdlksj huiehfdb feuf dslkjfh ewiulf hdskfh elukh fufh sdkfjlhseui fhuehakflhds '
-  },
-  {
-    type: 'sent',
-    content: 'Lorem ipsum fdfdfdsfdsf ds f fdfdlksj huiehfdb feuf dslkjfh ewiulf hdskfh elukh fufh sdkfjlhseui fhuehakflhds '
-  },
-  {
-    type: 'recieved',
-    content: 'Lorem ipsum fdfdfdsfdsf ds f fdfdlksj huiehfdb feuf dslkjfh ewiulf hdskfh elukh fufh sdkfjlhseui fhuehakflhds '
-  },
-  {
-    type: 'recieved',
-    content: 'Lorem ipsum fdfdfdsfdsf ds f fdfdlksj huiehfdb feuf dslkjfh ewiulf hdskfh elukh fufh sdkfjlhseui fhuehakflhds '
-  },
-]
+import { Context } from '../../../store/Store';
 
 export default function Body() {
+  
+  const [state, dispatch] = useContext(Context);
+
+  const messages = state.messages[state.activeMessageIdx].messages
+
   return (
-    <div className="w-full h-full py-8 px-12 bg-white shadow-md flex flex-col-reverse">
+    <div className="w-full h-full max-h-full overflow-auto py-8 px-12 bg-white shadow-md">
+      <div className="w-full h-full pr-4 flex flex-col-reverse scrollbar scrollbar-thin scrollbar-track-transparent scrollbar-thumb-rounded-full scrollbar-thumb-gray-200 hover:scrollbar-thumb-gray-400 transition-all">
       {messages.map((message, i) => {
         const sameTypeAbove = i < messages.length - 1 ? messages[i + 1].type === message.type : false;
         
@@ -43,6 +23,7 @@ export default function Body() {
             return <RecievedMessage content={message.content} key={i} sameTypeAbove={sameTypeAbove} />
         }
       })}
+      </div>
     </div>
   )
 }
